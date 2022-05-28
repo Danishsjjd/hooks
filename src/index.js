@@ -1,5 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+// useState:- see details in hooks.txt
+// useEffect:- async, can preform any lifecycle method and very common
+// useCallback:- same as useMemo but its return function instead function return
 import UseContext from "./hooks/UseContext";
 import UseDeferredValue from "./hooks/UseDeferredValue";
 import UseLayoutEffect from "./hooks/UseLayoutEffect";
