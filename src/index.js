@@ -1,17 +1,37 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import UseContext from "./hooks/UseContext";
+import UseDeferredValue from "./hooks/UseDeferredValue";
+import UseLayoutEffect from "./hooks/UseLayoutEffect";
+import UseMemo from "./hooks/UseMemo";
+import UseReducer from "./hooks/UseReducer";
+import UseRef from "./hooks/UseRef";
+import UseTransition from "./hooks/UseTransition";
+// coming soon:-
+// useDebugValue
+// useImperativeHandle
+// useId
+import TestingCustomHooks from "./container/TestingCustomHooks";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+	<React.StrictMode>
+		{/* <h1>use context</h1>
+		<UseContext /> */}
+		{/* <h1>use deferred value</h1>
+		<UseDeferredValue /> */}
+		{/* <h1>use layoutEffect</h1>
+		<UseLayoutEffect /> */}
+		{/* <h1>use Memo</h1>
+		<UseMemo /> */}
+		{/* <h1>use Reducer</h1>
+		<UseReducer /> */}
+		{/* <h1>Use Ref</h1>
+		<UseRef /> */}
+		{/* <h1>use Transition</h1>
+		<UseTransition />	 */}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+		<h1>custom hooks</h1>
+		<TestingCustomHooks />
+	</React.StrictMode>
+);

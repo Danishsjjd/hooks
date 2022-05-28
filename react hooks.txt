@@ -1,0 +1,52 @@
+hooks do not work in:-
+1. simple function(function whose name starts with a lower letter)
+2. top-level if statement
+
+hooks work in:-
+1. only in the top-level of react function component
+
+
+
+useState:-
+1. we always have to update the state depending on the previous value. if we update the state from the state we get from useState we may run into some problems
+2. initially useState can take a function that is run only one time when the first-time component mount
+
+useEffect:-
+1. you know everything because it is very simple and common
+2. async, can preform any lifecycle method
+
+
+useContext:-
+1. more like redux
+2. but it's cause render in whole components where we use provider, redux don't
+
+useRef:-
+1. it's more like useState but never causes re-render
+2. use case:- to know how many times a component is rendered
+3. give the reference in jsx (html) 
+
+
+useMemo(Memoization):-
+3. !important:- in js two same objects with the same everything but the name is not equal (because they have the different references) so if we use useEffect and give it a styled object it's gonna run every single time when component is re-render even theme is not change
+use case:-
+4. for Referential Equality 
+5. for slow function in which data is rarely changed 
+
+useCallback:-
+1. same as useMemo but its return function instead function return
+
+useReducer:-
+1. more like redux reducer needs actions to change data
+2. cause re-render 
+3. best for making different actions and knowing why and how data is change
+
+useTransition:-
+1. give high priority and low priority to states 
+2. hight priority states render first and low priority states which need more time to compute render after than high priority states
+
+
+useDeferredValue:-
+1. kinda like useTransition but here we don't always have to set state it's just for deferring value (Debounce And Throttle)
+
+useLayoutEffect:-
+1. the only and main difference between useEffect and useLayoutEffect is useEffect is async and useLayoutEffect is not
